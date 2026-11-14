@@ -27,11 +27,11 @@ export default function LinkCard({ link, initialCount }: Props) {
       onAuxClick={(e) => {
         if (e.button === 1) recordClick(); // 휠 클릭(새 탭)
       }}
-      className="relative flex min-h-16 items-center justify-center rounded-2xl border-2 border-foreground/80 bg-card px-5 py-4 transition hover:-translate-y-0.5 hover:bg-foreground/5 active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
+      className="relative flex min-h-16 items-center justify-center rounded-3xl border border-glass-border bg-glass px-6 py-4 shadow-[0_8px_24px_-12px_var(--shadow)] backdrop-blur-xl transition duration-200 ease-out hover:-translate-y-0.5 hover:bg-glass-hover active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent motion-reduce:transform-none"
     >
-      <span className="text-lg font-medium">{link.title}</span>
+      <span className="text-base font-semibold">{link.title}</span>
       {initialCount !== undefined && (
-        <span className="absolute right-4 text-xs tabular-nums text-foreground/50">
+        <span className="absolute right-5 text-xs tabular-nums text-foreground/45">
           클릭 {(initialCount + extraClicks).toLocaleString("ko-KR")}
         </span>
       )}

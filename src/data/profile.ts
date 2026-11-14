@@ -13,9 +13,9 @@ export type LinkItem = {
 
 // 아래 내용을 내 정보로 바꿔 주세요.
 export const profile: Profile = {
-  name: "뽀로로",
-  bio: "노는 게 제일 좋아",
-  image: "/profile.svg",
+  name: "박뽀로로",
+  bio: "풀스택 개발자| 요즘에는 AI 개발에 관심이 많아요",
+  image: "/profile.jpg",
 };
 
 export const links: LinkItem[] = [

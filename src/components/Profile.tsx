@@ -10,10 +10,12 @@ export default function Profile({ profile }: { profile: ProfileData }) {
         width={256}
         height={256}
         priority
-        className="size-56 rounded-full border-2 border-foreground/80 object-cover sm:size-64"
+        className="size-28 rounded-full object-cover shadow-[0_18px_40px_-12px_var(--shadow),0_4px_10px_-4px_var(--shadow)] ring-4 ring-glass-border sm:size-32"
       />
-      <h1 className="mt-8 text-2xl font-bold">{profile.name}</h1>
-      <p className="mt-4 text-lg text-foreground/70">{profile.bio}</p>
+      <h1 className="mt-6 text-2xl font-bold tracking-tight">{profile.name}</h1>
+      <p className="mt-2 text-base leading-relaxed text-balance break-keep text-foreground/65">
+        {profile.bio}
+      </p>
     </header>
   );
 }

@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
 import { profile } from "@/data/profile";
+// 한글이 포함된 Pretendard를 필요한 글자 묶음만 내려받도록(dynamic subset) 불러온다.
+import "pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: `${profile.name} | 링크나무`,
@@ -15,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="ko" className={`${geistSans.variable} h-full antialiased`}>
+    <html lang="ko" className="h-full antialiased">
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
