@@ -18,7 +18,7 @@ export default function Home() {
       <div aria-hidden className="page-backdrop" />
       <section className="flex w-full max-w-md flex-col items-center gap-10 sm:gap-12">
         <Profile profile={profile} />
-        {/* 프로필과 링크는 즉시 보여 주고, 클릭 수는 DB 조회가 끝나면 채운다. */}
+        {/* 프로필과 링크는 즉시 0회로 보여 주고, DB 조회가 끝나면 실제 클릭 수로 바꾼다. */}
         <Suspense fallback={<LinkList links={links} />}>
           <LinkListWithCounts />
         </Suspense>
